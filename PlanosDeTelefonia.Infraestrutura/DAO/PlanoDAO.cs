@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using NHibernate;
 using PlanosDeTelefonia.Dominio.Entidades;
 using PlanosDeTelefonia.Dominio.Enums;
 using PlanosDeTelefonia.Dominio.Repositorios;
@@ -6,19 +9,42 @@ namespace PlanosDeTelefonia.Infraestrutura.DAO
 {
     public class PlanoDAO : IPlanoRepositorio
     {
+        protected ISession session;
+
+        public PlanoDAO(ISession session)
+        {
+            this.session = session;
+        }
+        
+        
         public Plano BuscarPorID(int idPlano)
         {
-            throw new System.NotImplementedException();
+            return session.Get<Plano>(idPlano);
         }
 
-        public Plano BuscarPorOperadora(Operadora idOperadora)
+        public IList<Plano> BuscarPorOperadora(Operadora operadora)
         {
-            throw new System.NotImplementedException();
+            return session.QueryOver<Plano>().Where(x => x.Operadora == operadora).List();
         }
 
-        public Plano BuscarPorTipo(TipoPlano tipo)
+        public IList<Plano> BuscarPorTipo(TipoPlano tipo)
         {
-            throw new System.NotImplementedException();
+            return session.QueryOver<Plano>().Where(x => x.Tipo == tipo).List();           
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(Plano plano)
+        {
+            session.Delete(plano);
+        }
+
+        public void Salvar(Plano novoPlano)
+        {
+            session.SaveOrUpdate(novoPlano);
         }
     }
 }

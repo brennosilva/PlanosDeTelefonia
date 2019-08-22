@@ -1,13 +1,17 @@
+using System;
+using System.Collections.Generic;
 using PlanosDeTelefonia.Dominio.Entidades;
 using PlanosDeTelefonia.Dominio.Enums;
 
 namespace PlanosDeTelefonia.Dominio.Repositorios
 {
-    public interface IPlanoRepositorio
+    public interface IPlanoRepositorio : IDisposable
     {
-        Plano BuscarPorTipo(TipoPlano tipo);
-        Plano BuscarPorOperadora(Operadora idOperadora);
+        IList<Plano> BuscarPorTipo(TipoPlano tipo);
+        IList<Plano> BuscarPorOperadora(Operadora operadora);
         Plano BuscarPorID(int idPlano);
+        void Salvar(Plano novoPlano);
+        void Excluir(Plano Plano);
 
     }
 }

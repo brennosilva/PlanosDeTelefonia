@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PlanosDeTelefonia.Dominio.Enums;
+using PlanosDeTelefonia.Dominio.Repositorios;
 
 namespace PlanosDeTelefonia.Controllers
 {
@@ -15,6 +16,7 @@ namespace PlanosDeTelefonia.Controllers
         {
             try
             {
+                IPlanoRepositorio planoRepositorio = new PlanoDAO()
                 
             }
             catch (System.Exception)
