@@ -1,0 +1,12 @@
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.deps.json
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.dll
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.pdb
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.dll
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.pdb
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.csprojAssemblyReference.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.csproj.CoreCompileInputs.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.AssemblyInfoInputs.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.AssemblyInfo.cs
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.csproj.CopyComplete
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.dll
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.pdb

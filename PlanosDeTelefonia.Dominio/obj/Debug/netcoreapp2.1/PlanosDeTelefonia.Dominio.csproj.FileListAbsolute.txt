@@ -1,0 +1,9 @@
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.deps.json
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.dll
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.pdb
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.csprojAssemblyReference.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.csproj.CoreCompileInputs.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.AssemblyInfoInputs.cache
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.AssemblyInfo.cs
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.dll
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Dominio\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Dominio.pdb
