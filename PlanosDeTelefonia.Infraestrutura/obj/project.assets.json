@@ -12053,11 +12053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj",
+      "projectUniqueName": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj",
       "projectName": "PlanosDeTelefonia.Infraestrutura",
-      "projectPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj",
+      "projectPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj",
       "packagesPath": "C:\\Users\\402704\\.nuget\\packages\\",
-      "outputPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\obj\\",
+      "outputPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12074,8 +12074,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj": {
-              "projectPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj"
+            "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj": {
+              "projectPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj"
             }
           }
         }

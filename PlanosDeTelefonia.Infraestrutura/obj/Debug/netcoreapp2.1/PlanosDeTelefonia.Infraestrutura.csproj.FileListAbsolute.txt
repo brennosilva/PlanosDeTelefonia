@@ -10,3 +10,5 @@ C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netc
 C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.csproj.CopyComplete
 C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.dll
 C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\obj\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.pdb
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.runtimeconfig.json
+C:\Repositorio\PlanosDeTelefonia\PlanosDeTelefonia.Infraestrutura\bin\Debug\netcoreapp2.1\PlanosDeTelefonia.Infraestrutura.runtimeconfig.dev.json

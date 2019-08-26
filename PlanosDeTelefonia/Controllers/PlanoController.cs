@@ -27,6 +27,7 @@ namespace PlanosDeTelefonia.Controllers
                 PlanoServico planoServico = new PlanoServico(planoRepositorio);
                 var plano = planoServico.BuscarPorTipo(tipo);
                 return new JsonResult(plano);
+                
             }
             catch (System.Exception)
             {
