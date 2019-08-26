@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using PlanosDeTelefonia.Dominio.Entidades;
+
 namespace PlanosDeTelefonia.DTOS
 {
     public class PlanoDTO
@@ -8,6 +11,6 @@ namespace PlanosDeTelefonia.DTOS
         public int Valor { get; set; }
         public int Tipo { get; set; }
         public int IdOperadora { get; set; }
-        public int DDD { get; set; }
+        public List<DDD> DDDs { get; set; }
     }
 }

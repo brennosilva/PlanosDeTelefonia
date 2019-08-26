@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PlanosDeTelefonia.Dominio.Entidades;
@@ -97,8 +98,8 @@ namespace PlanosDeTelefonia.Controllers
                     Minutos = novoPlano.Minutos,
                     Tipo = (TipoPlano)novoPlano.Tipo,
                     Valor = novoPlano.Valor,
-                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora }
-                    // pensar no ddd
+                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora },
+                    DDDs = novoPlano.DDDs                              
                 });
                 HttpContext.Response.StatusCode = 201;
                 return new JsonResult("Plano cadastrado com sucesso!");
@@ -123,8 +124,8 @@ namespace PlanosDeTelefonia.Controllers
                     Minutos = novoPlano.Minutos,
                     Tipo = (TipoPlano)novoPlano.Tipo,
                     Valor = novoPlano.Valor,
-                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora }
-                    // pensar no ddd
+                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora },
+                    DDDs = novoPlano.DDDs
                 });
                 HttpContext.Response.StatusCode = 201;
                 return new JsonResult("Plano cadastrado com sucesso!");
