@@ -12059,9 +12059,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "FluentNHibernate >= 2.1.2",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
+      "NHibernate >= 5.1.3",
+      "Oracle.ManagedDataAccess.Core >= 2.12.0-beta2",
       "PlanosDeTelefonia.Dominio >= 1.0.0",
       "PlanosDeTelefonia.Infraestrutura >= 1.0.0"
     ]
@@ -12073,11 +12076,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\PlanosDeTelefonia.csproj",
+      "projectUniqueName": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\PlanosDeTelefonia.csproj",
       "projectName": "PlanosDeTelefonia",
-      "projectPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\PlanosDeTelefonia.csproj",
+      "projectPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\PlanosDeTelefonia.csproj",
       "packagesPath": "C:\\Users\\402704\\.nuget\\packages\\",
-      "outputPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\obj\\",
+      "outputPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12094,11 +12097,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj": {
-              "projectPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj"
+            "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj": {
+              "projectPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Dominio\\PlanosDeTelefonia.Dominio.csproj"
             },
-            "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj": {
-              "projectPath": "c:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj"
+            "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj": {
+              "projectPath": "C:\\Repositorio\\PlanosDeTelefonia\\PlanosDeTelefonia.Infraestrutura\\PlanosDeTelefonia.Infraestrutura.csproj"
             }
           }
         }
@@ -12112,6 +12115,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "FluentNHibernate": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12127,6 +12134,14 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "NHibernate": {
+            "target": "Package",
+            "version": "[5.1.3, )"
+          },
+          "Oracle.ManagedDataAccess.Core": {
+            "target": "Package",
+            "version": "[2.12.0-beta2, )"
           }
         },
         "imports": [

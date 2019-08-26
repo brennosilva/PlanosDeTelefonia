@@ -14,8 +14,7 @@ namespace PlanosDeTelefonia.Infraestrutura.DAO
         public PlanoDAO(ISession session)
         {
             this.session = session;
-        }
-        
+        }       
         
         public Plano BuscarPorID(int idPlano)
         {

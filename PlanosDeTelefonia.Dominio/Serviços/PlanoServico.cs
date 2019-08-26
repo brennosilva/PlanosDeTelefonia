@@ -18,6 +18,18 @@ namespace PlanosDeTelefonia.Dominio.Serviços
                 return plano;
             }
         }
+
+        public Plano BuscarPorID(int id)
+        {
+            var plano = respositorio.BuscarPorID(id);
+            return plano;
+        }
+
+        public IList<Plano> BuscarPorOperadora(Operadora operadora)
+        {
+            var plano = respositorio.BuscarPorOperadora(operadora);
+            return plano;
+        }
       
     }
 }
