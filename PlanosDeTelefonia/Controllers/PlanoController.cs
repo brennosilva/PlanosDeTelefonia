@@ -3,7 +3,10 @@ using Microsoft.Extensions.Configuration;
 using PlanosDeTelefonia.Dominio.Entidades;
 using PlanosDeTelefonia.Dominio.Enums;
 using PlanosDeTelefonia.Dominio.Repositorios;
+using PlanosDeTelefonia.Dominio.Serviços;
+using PlanosDeTelefonia.Infraestrutura.DAO;
 using PlanosDeTelefonia.Infraestrutura.DAO.Mapeamento;
+using PlanosDeTelefonia.Infraestrutura.NHibernate;
 
 namespace PlanosDeTelefonia.Controllers
 {
@@ -13,36 +16,38 @@ namespace PlanosDeTelefonia.Controllers
     {
         IConfiguration configuration;
 
+        public PlanoController(IConfiguration configuration) => this.configuration = configuration;
+
         [HttpGet("BuscarPorTipo")]
         public JsonResult BuscarPorTipo(TipoPlano tipo)
         {
             try
             {
-                // IPlanoRepositorio planoRepositorio = new PlanoDAO()
-                
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                var plano = planoServico.BuscarPorTipo(tipo);
+                return new JsonResult(plano);
             }
             catch (System.Exception)
             {
-                
-                throw;
+                return new JsonResult("Ocorreu um erro desconhecido!");
             }
-            return null;
         }
 
         [HttpGet("BuscarPorOperadora")]
-        public JsonResult BuscarPorTipo(int operadora)
+        public JsonResult BuscarPorTipo(int idOperadora)
         {
             try
             {
-                // IPlanoRepositorio planoRepositorio = new PlanoDAO()
-                
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                var plano = planoServico.BuscarPorOperadora(new Operadora { Codigo = idOperadora });
+                return new JsonResult(plano);
             }
             catch (System.Exception)
             {
-                
-                throw;
+                return new JsonResult("Ocorreu um erro desconhecido!");
             }
-            return null;
         }
 
         [HttpGet("BuscarPorId")]
@@ -50,47 +55,48 @@ namespace PlanosDeTelefonia.Controllers
         {
             try
             {
-                // IPlanoRepositorio planoRepositorio = new PlanoDAO()
-                
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                var plano = planoServico.BuscarPorID(id);
+                return new JsonResult(plano);
             }
             catch (System.Exception)
             {
-                
-                throw;
+                return new JsonResult("Ocorreu um erro desconhecido!");
             }
-            return null;
         }
 
         [HttpDelete("ExcluirPlano")]
-        public JsonResult ExcluirPlano(int idPlano)
+        public IActionResult ExcluirPlano(int idPlano)
         {
             try
             {
-                // IPlanoRepositorio planoRepositorio = new PlanoDAO()
-                
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                planoServico.ExcluirPlano(idPlano);
+                return Ok();
             }
             catch (System.Exception)
             {
-                
-                throw;
+                return new JsonResult("Ocorreu um erro desconhecido!");
             }
-            return null;
         }
 
         [HttpPost("CadastrarPlano")]
-        public JsonResult CadastrarPlano(Plano Plano)
+        public IActionResult CadastrarPlano(Plano novoPlano)
         {
             try
             {
-                IPlanoRepositorio planoRepositorio = new PlanoDAO(NHibernateSession.OpenSession<PlanoMap>(configuration, "SITEC"));
-                
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                planoServico.NovoPlano(novoPlano);
+                HttpContext.Response.StatusCode = 201;     
+                return new JsonResult("Plano cadastrado com sucesso!");              
             }
             catch (System.Exception)
             {
-                
-                throw;
+                return new JsonResult("Ocorreu um erro desconhecido!");
             }
-            return null;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using PlanosDeTelefonia.Dominio.Entidades;
 using PlanosDeTelefonia.Dominio.Enums;
@@ -29,6 +30,19 @@ namespace PlanosDeTelefonia.Dominio.Serviços
         {
             var plano = respositorio.BuscarPorOperadora(operadora);
             return plano;
+        }
+
+        public void ExcluirPlano(int id)
+        {
+            var plano = respositorio.BuscarPorID(id);
+            if(plano == null)
+                throw new Exception("Plano não existe");
+            respositorio.Excluir(plano);
+        } 
+
+        public void NovoPlano(Plano novoPlano)
+        {
+            respositorio.Salvar(novoPlano);
         }
       
     }
