@@ -1,0 +1,45 @@
+CREATE TABLE ddd (
+    ddd   NUMBER NOT NULL
+);
+
+ALTER TABLE ddd ADD CONSTRAINT operadora_pkv2 PRIMARY KEY ( ddd );
+
+CREATE TABLE ddd_plano (
+    ddd_ddd              NUMBER NOT NULL,
+    plano_codigo_plano   NUMBER NOT NULL
+);
+
+CREATE TABLE operadora (
+    codigo_operadora   NUMBER NOT NULL,
+    nome               VARCHAR2(30) NOT NULL
+);
+
+ALTER TABLE operadora ADD CONSTRAINT operadora_pk PRIMARY KEY ( codigo_operadora );
+
+CREATE TABLE plano (
+    codigo_plano                 NUMBER NOT NULL,
+    minutos                      NUMBER NOT NULL,
+    franquia_de_internet         VARCHAR2(30) NOT NULL,
+    valor                        NUMBER NOT NULL,
+    tipo                         NUMBER NOT NULL,
+    operadora_codigo_operadora   NUMBER NOT NULL
+);
+
+ALTER TABLE plano ADD CONSTRAINT ddd_pk PRIMARY KEY ( codigo_plano );
+
+ALTER TABLE ddd_plano
+    ADD CONSTRAINT ddd_plano_ddd_fk FOREIGN KEY ( ddd_ddd )
+        REFERENCES ddd ( ddd );
+
+ALTER TABLE ddd_plano
+    ADD CONSTRAINT ddd_plano_plano_fk FOREIGN KEY ( plano_codigo_plano )
+        REFERENCES plano ( codigo_plano );
+
+ALTER TABLE plano
+    ADD CONSTRAINT plano_operadora_fk FOREIGN KEY ( operadora_codigo_operadora )
+        REFERENCES operadora ( codigo_operadora );
+
+CREATE SEQUENCE  "SQ_PLANO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 169 NOCACHE  NOORDER  NOCYCLE ;
+CREATE SEQUENCE  "SQ_OPERADORA"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 169 NOCACHE  NOORDER  NOCYCLE ;
+ 
+

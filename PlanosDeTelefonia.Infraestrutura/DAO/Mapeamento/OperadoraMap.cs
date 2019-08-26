@@ -8,7 +8,7 @@ namespace PlanosDeTelefonia.Infraestrutura.DAO.Mapeamento
         public OperadoraMap()
         {
             Table("OPERADORA");
-            Id(x => x.Codigo).Column("CODIGO_OPERADORA");
+            Id(x => x.Codigo).Column("CODIGO_OPERADORA").GeneratedBy.Sequence("SQ_OPERADORA");
             Map(x => x.Nome).Column("NOME");
         }
     }
