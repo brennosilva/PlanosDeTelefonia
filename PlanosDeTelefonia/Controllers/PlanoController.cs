@@ -4,6 +4,7 @@ using PlanosDeTelefonia.Dominio.Entidades;
 using PlanosDeTelefonia.Dominio.Enums;
 using PlanosDeTelefonia.Dominio.Repositorios;
 using PlanosDeTelefonia.Dominio.Serviços;
+using PlanosDeTelefonia.DTOS;
 using PlanosDeTelefonia.Infraestrutura.DAO;
 using PlanosDeTelefonia.Infraestrutura.DAO.Mapeamento;
 using PlanosDeTelefonia.Infraestrutura.NHibernate;
@@ -27,7 +28,7 @@ namespace PlanosDeTelefonia.Controllers
                 PlanoServico planoServico = new PlanoServico(planoRepositorio);
                 var plano = planoServico.BuscarPorTipo(tipo);
                 return new JsonResult(plano);
-                
+
             }
             catch (System.Exception)
             {
@@ -84,15 +85,49 @@ namespace PlanosDeTelefonia.Controllers
         }
 
         [HttpPost("CadastrarPlano")]
-        public IActionResult CadastrarPlano(Plano novoPlano)
+        public IActionResult CadastrarPlano(PlanoDTO novoPlano)
         {
             try
             {
                 IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
                 PlanoServico planoServico = new PlanoServico(planoRepositorio);
-                planoServico.NovoPlano(novoPlano);
-                HttpContext.Response.StatusCode = 201;     
-                return new JsonResult("Plano cadastrado com sucesso!");              
+                planoServico.NovoPlano(new Plano
+                {
+                    FranquiaDeInternet = novoPlano.FranquiaDeInternet,
+                    Minutos = novoPlano.Minutos,
+                    Tipo = (TipoPlano)novoPlano.Tipo,
+                    Valor = novoPlano.Valor,
+                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora }
+                    // pensar no ddd
+                });
+                HttpContext.Response.StatusCode = 201;
+                return new JsonResult("Plano cadastrado com sucesso!");
+            }
+            catch (System.Exception)
+            {
+                return new JsonResult("Ocorreu um erro desconhecido!");
+            }
+        }
+
+        [HttpPut("AtualizarPlano")]
+        public IActionResult AtualizarPlano(PlanoDTO novoPlano)
+        {
+            try
+            {
+                IPlanoRepositorio planoRepositorio = new PlanoDAO(NhibernateHelper.OpenSession(configuration));
+                PlanoServico planoServico = new PlanoServico(planoRepositorio);
+                planoServico.NovoPlano(new Plano
+                {
+                    Codigo = novoPlano.Codigo,
+                    FranquiaDeInternet = novoPlano.FranquiaDeInternet,
+                    Minutos = novoPlano.Minutos,
+                    Tipo = (TipoPlano)novoPlano.Tipo,
+                    Valor = novoPlano.Valor,
+                    Operadora = new Operadora { Codigo = novoPlano.IdOperadora }
+                    // pensar no ddd
+                });
+                HttpContext.Response.StatusCode = 201;
+                return new JsonResult("Plano cadastrado com sucesso!");
             }
             catch (System.Exception)
             {

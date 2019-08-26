@@ -7,8 +7,8 @@ namespace PlanosDeTelefonia.Infraestrutura.DAO.Mapeamento
     {
         public DDDMap()
         {
-            Table("");
-            Id(x => x.CodigoDDD).Column("");
+            Table("DDD");
+            Id(x => x.CodigoDDD).Column("CODIGO_DDD");
         }
     }
 }

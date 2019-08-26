@@ -8,15 +8,15 @@ namespace PlanosDeTelefonia.Infraestrutura.DAO.Mapeamento
     {
         public PlanoMap()
         {
-            Table("");
-            Id(p => p.Codigo).Column("");
-            Map(p => p.Minutos).Column("");
-            Map(p => p.FranquiaDeInternet).Column("");
-            Map(p => p.Valor).Column("");
-            Map(p => p.Tipo).CustomType<TipoPlano>().Column("");
+            Table("PLANO");
+            Id(p => p.Codigo).Column("CODIGO_PLANO");
+            Map(p => p.Minutos).Column("MINUTOS");
+            Map(p => p.FranquiaDeInternet).Column("FRANQUIA_DE_INTERNET");
+            Map(p => p.Valor).Column("VALOR");
+            Map(p => p.Tipo).CustomType<TipoPlano>().Column("TIPO");
 
-            References(p => p.Operadora).Column("");
-            HasMany(p => p.DDDs).Table("").KeyColumn("");
+            References(p => p.Operadora).Column("CODIGO_OPERADORA");
+            HasMany(p => p.DDDs).Table("").KeyColumn("CODIGO_DDD");
         }
     }
 }
