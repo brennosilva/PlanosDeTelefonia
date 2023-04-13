@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
     <PackageReference Include="NHibernate" Version="5.1.3" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.12.0-beta2" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.90" />
      <PackageReference Include="Microsoft.AspNetCore.App" version="2.1.1"/>
   </ItemGroup>
 
